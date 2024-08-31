@@ -38,7 +38,7 @@ def generate_d_pa(p, a):
 			for j in range(a):
 					cidade_arbitro = cidades_jogos[j % len(cidades_jogos)]
 					# print(f"Arbitro ({j}): {cidade_arbitro}")
-					matriz[i, j] = geodesic(capitais[cidade_jogo], capitais[cidade_arbitro]).kilometers
+					matriz[i, j] = 2*(geodesic(capitais[cidade_jogo], capitais[cidade_arbitro]).kilometers)
 
 	return matriz
 
@@ -83,3 +83,4 @@ def generate_b_pe(p, e, r):
 					index += 1
 
 	return matriz
+
