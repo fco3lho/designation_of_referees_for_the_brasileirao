@@ -1,0 +1,25 @@
+Locais dos jogos:
+
+Belo Horizonte
+Curitiba
+Florianopolis
+Goiânia
+Porto Alegre
+Recife
+Rio de Janeiro
+Salvador
+São Paulo
+
+Locais dos arbitros:
+
+Belém
+Belo Horizonte
+Curitiba
+Florianópolis
+Goiãnia
+Maceió
+Porto Alegre
+Rio de Janeiro
+Salvador
+São Paulo
+

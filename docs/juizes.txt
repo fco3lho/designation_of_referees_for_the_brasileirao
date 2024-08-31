@@ -1,0 +1,20 @@
+1 Ricardo Marques Ribeiro: 		Belo Horizonte
+2 Leandro Pedro Vuaden: 		Porto Alegre
+3 Marcelo de Lima Henrique: 		Rio de Janeiro
+4 Dewson Fernando Freitas: 		Belém
+5 Pericles Bassols Pegado: 		Rio de Janeiro
+6 Luiz Flávio de Oliveira: 		São Paulo
+7 Wilton Pereira Sampaio: 		Goiãnia
+8 Raphael Claus: 			São Paulo
+9 Anderson Daronco: 			Porto Alegre
+10 Heber Roberto Lopes: 		Curitiba
+11 Sandro Meira Ricci: 			Belo Horizonte
+12 Elmo Alves Resende Cunha: 		Goiânia
+13 Francisco Carlos do Nascimento: 	Maceió
+14 Andre Luiz de Freitas Castro: 	Goiânia
+15 Marcelo Aparecido de Sousa: 		São Paulo
+16 Paulo Godoy Bezerra: 		Florianópolis
+18 Jailton Macedo Freitas: 		Salvador
+19 Vinicius Furlan: 			São Paulo
+20 Flávio Rodrigues Guerra: 		Curitiba
+
