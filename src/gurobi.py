@@ -41,10 +41,16 @@ def gurobi(d_pa, a_pr, b_pe, A, P, R, E):
 
   # Exibir os resultados
   if model.status == GRB.OPTIMAL:
-      print("Solução ótima encontrada:")
-      for p in P:
-          for a in A:
-              if x_pa[p, a].x == 1:
-                  print(f"Partida {p+1} será apitada pelo árbitro {a+1}.")
+      
+    print("\n---------------------------------------------------")
+    print("Solução ótima")
+    print("---------------------------------------------------")
+    print(f"Valor da função objetivo: {model.objVal}\n")
+    
+    print("Solução ótima encontrada:")
+    for p in P:
+        for a in A:
+            if x_pa[p, a].x == 1:
+                print(f"Partida {p+1} será apitada pelo árbitro {a+1}.")
   else:
       print("Não foi encontrada uma solução ótima.")
