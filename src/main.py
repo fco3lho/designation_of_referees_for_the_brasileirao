@@ -46,10 +46,10 @@ n_arbitros = len(arbitros)
 n_equipes = len(equipes)
 
 # Distância entre o local da Partida p para o local de origem do Árbitro a.
-a_pr = generate_a_pr(n_partidas, n_rodadas)
+d_pa = generate_d_pa(n_partidas, n_arbitros, capitais_proximas, capitais_distantes)
 
 # 1 se a Partida p pertence a Rodada r, 0 caso contrário
-d_pa = generate_d_pa(n_partidas, n_arbitros, capitais_proximas, capitais_distantes)
+a_pr = generate_a_pr(n_partidas, n_rodadas)
 
 # 1 se a Partida p contém a Equipe e, 0 caso contrário
 b_pe = generate_b_pe(n_partidas, n_equipes, n_rodadas)
