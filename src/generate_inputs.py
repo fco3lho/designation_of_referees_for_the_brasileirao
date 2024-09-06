@@ -2,6 +2,22 @@ import numpy as np
 import random
 from geopy.distance import geodesic
 
+def generate_d_pa(p, a, capitais_para_jogos, capitais_para_arbitros):
+	matriz = np.zeros((p, a))
+	cidades_jogos = list(capitais_para_jogos.keys())
+	cidades_arbitros = list(capitais_para_arbitros.keys())
+
+	# Calcula a distância da cidade de cada jogo para cada árbitro,
+	# usando de referência a variável 'capitais', com cada cidade
+	# com sua respectiva coordenada geográfica
+	for i in range(p): 
+			cidade_jogo = cidades_jogos[i % len(cidades_jogos)]
+			for j in range(a):
+					cidade_arbitro = cidades_arbitros[j % len(cidades_arbitros)]
+					matriz[i, j] = 2*(geodesic(capitais_para_jogos[cidade_jogo], capitais_para_arbitros[cidade_arbitro]).kilometers)
+
+	return matriz
+
 def generate_a_pr(p, r):
 	matriz = np.zeros((p, r))
 
@@ -11,34 +27,6 @@ def generate_a_pr(p, r):
 				matriz[i, j] = 1
 			else:
 				matriz[i, j] = 0
-
-	return matriz
-
-def generate_d_pa(p, a):
-	matriz = np.zeros((p, a))
-
-	capitais = {	
-								"Belo Horizonte": (-19.927230, -43.945857), 
-								"Curitiba": (-25.441091, -49.263032), 
-								"Florianópolis": (-27.610763, -48.504662), 
-								"Goiânia": (-16.696749, -49.267414), 
-								"Porto Alegre": (-30.070150, -51.190201), 
-								"Recife": (-8.053501, -34.904352), 
-								"Rio de Janeiro": (-22.893805, -43.261288), 
-								"Salvador": (-12.944368, -38.444124), 
-								"São Paulo": (-23.562218, -46.636551)
-							}
-	cidades_jogos = list(capitais.keys())
-
-	# Calcula a distância da cidade de cada jogo para cada árbitro,
-	# usando de referência a variável 'capitais', com cada cidade
-	# com sua respectiva coordenada geográfica
-	for i in range(p): 
-			cidade_jogo = cidades_jogos[i % len(cidades_jogos)] 
-			for j in range(a):
-					cidade_arbitro = cidades_jogos[j % len(cidades_jogos)]
-					# print(f"Arbitro ({j}): {cidade_arbitro}")
-					matriz[i, j] = 2*(geodesic(capitais[cidade_jogo], capitais[cidade_arbitro]).kilometers)
 
 	return matriz
 
@@ -83,4 +71,3 @@ def generate_b_pe(p, e, r):
 					index += 1
 
 	return matriz
-
