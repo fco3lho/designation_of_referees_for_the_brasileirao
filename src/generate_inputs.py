@@ -8,12 +8,16 @@ def generate_d_pa(p, a, capitais_para_jogos, capitais_para_arbitros):
 	cidades_arbitros = list(capitais_para_arbitros.keys())
 
 	# Calcula a distância da cidade de cada jogo para cada árbitro,
-	# usando de referência a variável 'capitais', com cada cidade
-	# com sua respectiva coordenada geográfica
+	# usando de referência as variáveis 'capitais_para_jogos' e 
+	# 'capitais_para_arbitros', com cada cidade	# com sua respectiva 
+	# coordenada geográfica
 	for i in range(p): 
+			# Após acabar lista de cidades, recomeça do 0
 			cidade_jogo = cidades_jogos[i % len(cidades_jogos)]
 			for j in range(a):
+					# Após acabar lista de cidades, recomeça do 0
 					cidade_arbitro = cidades_arbitros[j % len(cidades_arbitros)]
+					# Multiplicado por 2 levando em conta ida e volta
 					matriz[i, j] = 2*(geodesic(capitais_para_jogos[cidade_jogo], capitais_para_arbitros[cidade_arbitro]).kilometers)
 
 	return matriz
@@ -69,5 +73,28 @@ def generate_b_pe(p, e, r):
 					matriz[index, time1] = 1
 					matriz[index, time2] = 1
 					index += 1
+
+	# Impressão da matriz b_pe
+	# for i in range(380):
+	# 	print(matriz[i][0], 
+	# 			matriz[i][1], 
+	# 			matriz[i][2], 
+	# 			matriz[i][3], 
+	# 			matriz[i][4], 
+	# 			matriz[i][5], 
+	# 			matriz[i][6], 
+	# 			matriz[i][7], 
+	# 			matriz[i][8], 
+	# 			matriz[i][9], 
+	# 			matriz[i][10], 
+	# 			matriz[i][11], 
+	# 			matriz[i][12], 
+	# 			matriz[i][13], 
+	# 			matriz[i][14], 
+	# 			matriz[i][15], 
+	# 			matriz[i][16], 
+	# 			matriz[i][17], 
+	# 			matriz[i][18], 
+	# 			matriz[i][19])
 
 	return matriz
