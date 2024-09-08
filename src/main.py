@@ -46,7 +46,11 @@ n_arbitros = len(arbitros)
 n_equipes = len(equipes)
 
 # Distância entre o local da Partida p para o local de origem do Árbitro a.
-d_pa = generate_d_pa(n_partidas, n_arbitros, capitais_proximas, capitais_distantes)
+d_pa = generate_d_pa(n_partidas, n_arbitros, capitais_proximas, capitais_proximas) 
+# O terceiro parâmetro refere-se as cidades dos jogos, você pode escolher entre as duas variáveis criadas anteriormente, 
+# 'capitais_distantes' ou 'capitais_proximas', ou pode criar uma nova variável no mesmo formato, contendo as cidades reconhecidas
+# pela biblioteca 'geodesic', com as latitudes e longitudes das cidades. O mesmo serve para o quarto parâmetro, mas este se 
+# tratando das capitais dos estados de onde os juízes moram.
 
 # 1 se a Partida p pertence a Rodada r, 0 caso contrário
 a_pr = generate_a_pr(n_partidas, n_rodadas)
